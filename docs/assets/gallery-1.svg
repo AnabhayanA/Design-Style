@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Gallery image 1">
-  <rect width="100%" height="100%" fill="#f7f7fb" />
-  <g transform="translate(40,40)">
-    <rect width="240" height="120" rx="12" fill="#fff" stroke="#e6e6ef" />
-    <rect x="260" width="240" height="120" rx="12" fill="#fff" stroke="#e6e6ef" />
-    <rect y="140" width="460" height="200" rx="12" fill="#fff" stroke="#e6e6ef" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Gallery image 1 - List view">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#6200EE" />
+      <stop offset="1" stop-color="#03DAC6" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f5f5f7" />
+  <g filter="url(#shadow)">
+    <!-- Header -->
+    <rect x="24" y="24" width="592" height="56" rx="12" fill="#fff" />
+    <circle cx="48" cy="52" r="16" fill="url(#g1)" />
+    <rect x="72" y="44" width="120" height="8" rx="4" fill="#1f1f1f" />
+    <rect x="72" y="56" width="80" height="6" rx="3" fill="#999" />
+  </g>
+  <!-- List items -->
+  <g filter="url(#shadow)">
+    <rect x="24" y="100" width="592" height="76" rx="12" fill="#fff" />
+    <rect x="40" y="116" width="48" height="48" rx="8" fill="#6200EE" />
+    <rect x="100" y="116" width="140" height="12" rx="6" fill="#1f1f1f" />
+    <rect x="100" y="136" width="100" height="8" rx="4" fill="#999" />
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="24" y="192" width="592" height="76" rx="12" fill="#fff" />
+    <rect x="40" y="208" width="48" height="48" rx="8" fill="#03DAC6" />
+    <rect x="100" y="208" width="140" height="12" rx="6" fill="#1f1f1f" />
+    <rect x="100" y="228" width="100" height="8" rx="4" fill="#999" />
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="24" y="284" width="592" height="76" rx="12" fill="#fff" />
+    <rect x="40" y="300" width="48" height="48" rx="8" fill="#FF6B9D" />
+    <rect x="100" y="300" width="140" height="12" rx="6" fill="#1f1f1f" />
+    <rect x="100" y="320" width="100" height="8" rx="4" fill="#999" />
   </g>
 </svg>

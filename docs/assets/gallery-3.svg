@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Gallery image 3">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Gallery image 3 - Inspiration">
+  <defs>
+    <linearGradient id="g3" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FF6B9D" />
+      <stop offset="1" stop-color="#6200EE" />
+    </linearGradient>
+    <filter id="shadow3">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.12"/>
+    </filter>
+  </defs>
   <rect width="100%" height="100%" fill="#f3fbff" />
-  <g transform="translate(40,40)">
-    <circle cx="80" cy="80" r="56" fill="#6200EE" opacity="0.95" />
-    <rect x="160" y="24" width="360" height="112" rx="12" fill="#fff" stroke="#e6f0ff" />
-    <rect y="160" width="480" height="180" rx="12" fill="#fff" stroke="#e6f0ff" />
+  <!-- Central illustration -->
+  <g filter="url(#shadow3)">
+    <!-- Large circle -->
+    <circle cx="180" cy="140" r="80" fill="url(#g3)" opacity="0.9" />
+    <!-- Accent circle -->
+    <circle cx="320" cy="200" r="60" fill="#03DAC6" opacity="0.85" />
+    <!-- Small accent -->
+    <circle cx="480" cy="120" r="40" fill="#FF6B9D" opacity="0.8" />
+  </g>
+  <!-- Content cards -->
+  <g filter="url(#shadow3)">
+    <rect x="40" y="280" width="560" height="100" rx="16" fill="#fff" />
+    <rect x="60" y="300" width="200" height="14" rx="7" fill="#1f1f1f" />
+    <rect x="60" y="325" width="400" height="10" rx="5" fill="#999" />
+    <rect x="60" y="345" width="400" height="10" rx="5" fill="#999" />
+  </g>
+  <!-- Decorative elements -->
+  <g opacity="0.3">
+    <circle cx="120" cy="80" r="8" fill="#6200EE" />
+    <circle cx="520" cy="300" r="6" fill="#03DAC6" />
+    <circle cx="80" cy="380" r="5" fill="#FF6B9D" />
   </g>
 </svg>

@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Gallery image 2">
-  <rect width="100%" height="100%" fill="#fff9f8" />
-  <g transform="translate(40,40)">
-    <rect width="560" height="60" rx="8" fill="#fff" stroke="#f0e9f8" />
-    <g transform="translate(0,90)">
-      <rect width="420" height="40" rx="8" fill="#fff" stroke="#e9e7f6" />
-      <rect x="440" width="120" height="40" rx="20" fill="#03DAC6" />
-    </g>
-    <g transform="translate(0,150)">
-      <rect width="560" height="40" rx="8" fill="#fff" stroke="#e9e7f6" />
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Gallery image 2 - Settings panel">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#6200EE" />
+      <stop offset="1" stop-color="#03DAC6" />
+    </linearGradient>
+    <filter id="shadow2">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f5f5f7" />
+  <!-- Settings header -->
+  <g filter="url(#shadow2)">
+    <rect x="24" y="24" width="592" height="56" rx="12" fill="#fff" />
+    <rect x="40" y="38" width="12" height="12" rx="2" fill="#999" />
+    <text x="320" y="54" font-family="Roboto" font-size="16" font-weight="600" text-anchor="middle" fill="#1f1f1f">Settings</text>
+  </g>
+  <!-- Toggle switches -->
+  <g filter="url(#shadow2)">
+    <rect x="24" y="100" width="592" height="56" rx="12" fill="#fff" />
+    <rect x="40" y="116" width="120" height="12" rx="6" fill="#1f1f1f" />
+    <!-- Toggle ON -->
+    <rect x="548" y="118" width="44" height="24" rx="12" fill="#03DAC6" />
+    <circle cx="564" cy="130" r="10" fill="#fff" />
+  </g>
+  <!-- Option with radio button -->
+  <g filter="url(#shadow2)">
+    <rect x="24" y="168" width="592" height="56" rx="12" fill="#fff" />
+    <rect x="40" y="184" width="120" height="12" rx="6" fill="#1f1f1f" />
+    <circle cx="548" cy="204" r="10" stroke="#6200EE" stroke-width="2" fill="none" />
+    <circle cx="548" cy="204" r="6" fill="#6200EE" />
+  </g>
+  <!-- Slider control -->
+  <g filter="url(#shadow2)">
+    <rect x="24" y="236" width="592" height="56" rx="12" fill="#fff" />
+    <rect x="40" y="252" width="100" height="12" rx="6" fill="#1f1f1f" />
+    <!-- Slider track -->
+    <rect x="480" y="261" width="80" height="4" rx="2" fill="#eee" />
+    <rect x="480" y="261" width="48" height="4" rx="2" fill="url(#g2)" />
+    <circle cx="528" cy="263" r="8" fill="url(#g2)" />
+  </g>
+  <!-- Color option -->
+  <g filter="url(#shadow2)">
+    <rect x="24" y="304" width="592" height="56" rx="12" fill="#fff" />
+    <rect x="40" y="320" width="120" height="12" rx="6" fill="#1f1f1f" />
+    <circle cx="540" cy="332" r="12" fill="#6200EE" />
+    <circle cx="565" cy="332" r="12" fill="#03DAC6" />
+    <circle cx="590" cy="332" r="12" fill="#FF6B9D" />
   </g>
 </svg>
