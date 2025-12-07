@@ -714,3 +714,29 @@ a {
   transform: scale(1.1) rotate(-5deg);
   box-shadow: var(--shadow-6);
 }
+
+  /* ===============================
+     KEYBOARD FOCUS & ACCESSIBILITY
+  =============================== */
+  .btn-primary:focus-visible,
+  .btn-outline:focus-visible,
+  .fab:focus-visible,
+  .main-nav a:focus-visible,
+  .card:focus-visible,
+  .ripple:focus-visible,
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(98, 0, 238, 0.15);
+  }
+
+  /* Fallback for browsers without focus-visible */
+  .btn-primary:focus,
+  .btn-outline:focus,
+  .fab:focus,
+  .main-nav a:focus,
+  button:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }

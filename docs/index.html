@@ -24,6 +24,62 @@
   </div>
 </header>
 
+      <!-- Component Examples with States -->
+      <h3 style="font-size: 1.5rem; margin-top: 3rem; margin-bottom: 2rem; color: var(--text);">📋 Material Component States</h3>
+    
+      <!-- Buttons Component -->
+      <div style="background: var(--surface); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-1); border: 1px solid rgba(0,0,0,0.04);">
+        <h4 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 600;">Buttons — All States</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+          <div style="text-align: center;">
+            <button class="btn-primary ripple" style="margin-bottom: 0.5rem;">Filled</button>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Default state</p>
+          </div>
+          <div style="text-align: center;">
+            <button class="btn-primary ripple" style="margin-bottom: 0.5rem; opacity: 0.6; cursor: not-allowed;">Disabled</button>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Disabled state</p>
+          </div>
+          <div style="text-align: center;">
+            <button class="btn-outline ripple" style="margin-bottom: 0.5rem;">Outlined</button>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Secondary action</p>
+          </div>
+          <div style="text-align: center;">
+            <button style="background: transparent; border: none; color: var(--color-primary); font-weight: 600; padding: 0.75rem 1rem; cursor: pointer; margin-bottom: 0.5rem; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='rgba(98,0,238,0.08)'" onmouseout="this.style.background='transparent'">Text</button>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Tertiary action</p>
+          </div>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">✓ All buttons include ripple effects, proper contrast (WCAG AA), and focus indicators for accessibility</p>
+      </div>
+
+      <!-- Cards Component -->
+      <div style="background: var(--surface); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-1); border: 1px solid rgba(0,0,0,0.04);">
+        <h4 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 600;">Cards — Elevation Levels</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem;">
+          <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: var(--shadow-1); border: 1px solid rgba(0,0,0,0.04);">
+            <h5 style="color: var(--text); font-weight: 600; margin-bottom: 0.5rem;">Outlined Card</h5>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Elevation 0 — Subtle outline only</p>
+          </div>
+          <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: var(--shadow-4); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+            <h5 style="color: var(--text); font-weight: 600; margin-bottom: 0.5rem;">Elevated Card</h5>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Elevation 4 — With hover lift</p>
+          </div>
+          <div style="background: linear-gradient(135deg, #F0E6FF, #E6F7FF); border-radius: 12px; padding: 1.5rem; box-shadow: var(--shadow-6);">
+            <h5 style="color: var(--text); font-weight: 600; margin-bottom: 0.5rem;">Filled Card</h5>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Elevation 6 — Highest prominence</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chips Component -->
+      <div style="background: var(--surface); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-1); border: 1px solid rgba(0,0,0,0.04);">
+        <h4 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 600;">Chips — Interactive Elements</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <button style="padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(98,0,238,0.3); background: rgba(98,0,238,0.08); color: var(--color-primary); font-weight: 500; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;" onmouseover="this.style.background='rgba(98,0,238,0.15)'" onmouseout="this.style.background='rgba(98,0,238,0.08)'">✓ Material Design</button>
+          <button style="padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(3,218,198,0.3); background: rgba(3,218,198,0.08); color: var(--color-secondary); font-weight: 500; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;" onmouseover="this.style.background='rgba(3,218,198,0.15)'" onmouseout="this.style.background='rgba(3,218,198,0.08)'">✓ Accessible</button>
+          <button style="padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,183,3,0.3); background: rgba(255,183,3,0.08); color: var(--color-tertiary); font-weight: 500; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;" onmouseover="this.style.background='rgba(255,183,3,0.15)'" onmouseout="this.style.background='rgba(255,183,3,0.08)'">✓ Responsive</button>
+          <button style="padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,107,157,0.3); background: rgba(255,107,157,0.08); color: var(--color-accent); font-weight: 500; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;" onmouseover="this.style.background='rgba(255,107,157,0.15)'" onmouseout="this.style.background='rgba(255,107,157,0.08)'">✓ Polished</button>
+        </div>
+      </div>
 <section id="hero" class="hero elevation-2">
   <div class="hero-blobs" aria-hidden="true">
     <div class="blob b1"></div>
@@ -46,6 +102,84 @@
     </div>
   </div>
 </section>
+
+  <section id="research" class="section research-section">
+    <div class="container">
+      <h2 class="section-title animate">📚 Material Design 3 — Research & Overview</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem;">
+        <!-- Left: History -->
+        <article class="research-card animate delay-1">
+          <h3 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.3rem; font-weight: 600;">📖 Evolution & History</h3>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+            <strong>Material Design</strong> was introduced by Google in 2014 as a comprehensive design system. <strong>Material 2</strong> (2018) refined the language with elevated surfaces and refined motion. <strong>Material Design 3 (2021)</strong> brought revolutionary personalization through <strong>Material You</strong> — dynamic color extraction from wallpapers and tone-based theming, making interfaces feel personal and accessible.
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.8; margin: 0; padding-left: 1.5rem;">
+            <li><strong>2014:</strong> Material Design introduced — skeuomorphism to flat design</li>
+            <li><strong>2018:</strong> Material 2 — elevated surfaces, refined motion curves</li>
+            <li><strong>2021:</strong> Material 3 — Material You, dynamic color, tonal palettes</li>
+            <li><strong>2024+:</strong> Continued refinement of accessibility and theming</li>
+          </ul>
+        </article>
+
+        <!-- Right: Core Principles -->
+        <article class="research-card animate delay-2">
+          <h3 style="color: var(--color-secondary); margin-bottom: 1rem; font-size: 1.3rem; font-weight: 600;">🎯 Core Principles</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.8; margin: 0; padding-left: 1.5rem;">
+            <li><strong>User-Centric:</strong> Every design decision centered on user needs and accessibility</li>
+            <li><strong>Unified Design:</strong> Consistent patterns across Android, iOS, and web platforms</li>
+            <li><strong>Personalization:</strong> Material You enables dynamic theming based on user preferences</li>
+            <li><strong>Expressive Motion:</strong> Animations guide attention and provide meaningful feedback (200-400ms)</li>
+            <li><strong>Elevation & Depth:</strong> Layered shadows create visual hierarchy and spatial relationships</li>
+            <li><strong>Inclusive Design:</strong> WCAG AA/AAA contrast ratios, accessible color combinations</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Key Concepts -->
+      <div style="background: linear-gradient(135deg, rgba(98,0,238,0.08), rgba(3,218,198,0.08)); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--color-primary);">
+        <h3 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 600;">🔑 Key Concepts in Material Design 3</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+          <div>
+            <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Color System</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Tonal palettes (50-900) for primary, secondary, tertiary, and neutral colors. Every tone tested for WCAG AA contrast ensuring accessibility across all pairings.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--color-secondary); margin-bottom: 0.5rem;">Motion & Easing</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Cubic-bezier easing (0.4, 0, 0.2, 1) with standardized durations: 150ms (short), 250ms (standard), 375ms (long) for consistent feel.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--color-accent); margin-bottom: 0.5rem;">Elevation System</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">0dp (flat), 1dp, 3dp, 6dp, 8dp levels using layered shadows. Indicates interactivity and component hierarchy.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--color-tertiary); margin-bottom: 0.5rem;">Typography</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Roboto font family with flexible type scale (12px-57px). Weights 300-700 for visual hierarchy and emphasis.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--color-info); margin-bottom: 0.5rem;">Component States</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Enabled, disabled, hover, focus, pressed, dragged states. Visual feedback required for all interactive elements.</p>
+          </div>
+          <div>
+            <h4 style="color: #FF6B9D; margin-bottom: 0.5rem;">Spacing Grid</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">8px base unit grid. All padding, margins, and gaps use multiples of 8px for consistency and rhythm.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- References -->
+      <div style="background: var(--surface); border-radius: 16px; padding: 2rem; border: 1px solid rgba(0,0,0,0.04); box-shadow: var(--shadow-1);">
+        <h3 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 600;">📖 References & Resources</h3>
+        <ol style="color: var(--text-secondary); line-height: 2; margin: 0; padding-left: 1.5rem;">
+          <li><strong>Material Design 3 Official Guide:</strong> <a href="https://m3.material.io/" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">m3.material.io</a> — Complete design system documentation</li>
+          <li><strong>Color System & Tonal Palettes:</strong> <a href="https://m3.material.io/styles/color/the-color-system/color-roles" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">Color Roles Documentation</a> — How to use primary, secondary, tertiary colors</li>
+          <li><strong>Material You & Personalization:</strong> <a href="https://design.google/articles/materials-3/" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">Google Design — Material You Article</a> — Dynamic color extraction and theming</li>
+          <li><strong>Motion Guidelines:</strong> <a href="https://m3.material.io/motion/overview" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">Material Motion Specs</a> — Easing curves, durations, and choreography</li>
+          <li><strong>Accessibility & Contrast:</strong> <a href="https://m3.material.io/foundations/accessible-design/overview" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">Accessible Design Guide</a> — WCAG compliance and inclusive design</li>
+          <li><strong>Component Specifications:</strong> <a href="https://m3.material.io/components" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">Component Catalog</a> — Detailed specs for all Material components</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
   <section id="palette" class="section palette-section">
     <div class="container">
