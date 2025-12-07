@@ -50,6 +50,18 @@
   </div>
 </section>
 
+  <section id="palette" class="section palette-section">
+    <div class="container">
+      <h2 class="section-title animate">Material Palette</h2>
+      <div class="cards grid-4 animate delay-1">
+        <div class="mini-card" style="background:var(--color-primary);height:120px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700">Primary<br>#6200EE</div>
+        <div class="mini-card" style="background:var(--color-secondary);height:120px;display:flex;align-items:center;justify-content:center;color:#012;font-weight:700">Secondary<br>#03DAC6</div>
+        <div class="mini-card" style="background:linear-gradient(90deg,var(--color-primary),#7b5bff);height:120px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700">Accent</div>
+        <div class="mini-card" style="background:var(--surface);height:120px;display:flex;align-items:center;justify-content:center;color:var(--text);font-weight:700;border:1px solid rgba(0,0,0,0.06)">Surface<br>#FFFFFF</div>
+      </div>
+    </div>
+  </section>
+
 <section id="about" class="section about-section">
   <div class="container">
     <h2 class="section-title animate">About this style</h2>
@@ -131,7 +143,7 @@
   }, { threshold: 0.22 });
 
   document.querySelectorAll('.animate').forEach(el => io.observe(el));
-  document.querySelectorAll('.ripple').forEach(el => {
+    document.querySelectorAll('.ripple').forEach(el => {
     el.addEventListener('click', function (ev) {
       const span = document.createElement('span');
       span.className = 'ripple-effect';
@@ -141,7 +153,7 @@
       span.style.width = span.style.height = size + 'px';
       span.style.left = (ev.clientX - rect.left - size/2) + 'px';
       span.style.top = (ev.clientY - rect.top - size/2) + 'px';
-      setTimeout(() => span.remove(), 700);
+      setTimeout(() => span.remove(), 300);
     });
   });
 </script>
