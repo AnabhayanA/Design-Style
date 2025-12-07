@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Design Style Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-bar elevation-4">
+    <div class="container row-between">
+      <div class="brand">
+        <img src="assets/md-widgets.svg" class="logo" alt="logo">
+        <span class="site-title">Design Style Gallery</span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Material Pixel (this repo)</a>
+        <a href="examples.html">Examples</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="section-title">Design Gallery — Submissions</h1>
+
+    <p>This gallery links to individual style sites that include both the historical/research write-up and a working demo showcasing the style.</p>
+
+    <ul class="resource-list">
+      <li><a href="index.html">Material Pixel — demo & notes (already in this repo)</a></li>
+      <li><a href="swiss/index.html">Swiss Style — Research & Demo (example)</a></li>
+      <li><strong>Placeholder:</strong> Bauhaus — <em>add your site at</em> `docs/bauhaus/` and link it here.</li>
+    </ul>
+
+    <h2 class="section-title">How to add your style site</h2>
+    <ol>
+      <li>Copy `style-template.html` to a new folder under `docs/` (for example `docs/swiss/index.html`).</li>
+      <li>Replace the placeholder research text with your historical summary, citations, and a short bibliography.</li>
+      <li>Build a small demo section that shows 2–4 components demonstrating the style (use existing CSS utility classes where helpful).</li>
+      <li>Commit your new folder and send the gallery URL (GitHub Pages or raw link) as your assignment submission.</li>
+    </ol>
+
+    <h2 class="section-title">Grading checklist</h2>
+    <ul>
+      <li>Contains a research/history section with at least 3 references.</li>
+      <li>Contains a demo section with visible examples (images or live components).</li>
+      <li>Uses accessible markup (roles/aria where relevant) and respects reduced-motion.</li>
+      <li>Page is reachable from this gallery (add a link here after creating your page).</li>
+    </ul>
+
+  </main>
+
+  <footer class="footer elevation-2">
+    <div class="container">Made for Design Style assignment</div>
+  </footer>
+</body>
+</html>

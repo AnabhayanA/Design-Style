@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swiss Style — Research & Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="app-bar elevation-4" role="banner">
+    <div class="container row-between">
+      <div class="brand">
+        <img src="../assets/md-widgets.svg" class="logo" alt="logo">
+        <span class="site-title">Swiss Design</span>
+      </div>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <a href="../gallery.html">Gallery</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="section-title">Swiss Design Lineage — History & Principles</h1>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Overview</h2>
+        <p>The Swiss (International Typographic) style emerged in Switzerland in the 1940s–1960s. It emphasizes clarity, objectivity, and typographic precision. Key traits include asymmetric layouts, a strong grid, use of sans-serif type (e.g., Helvetica), clear hierarchy, and restrained color palettes.</p>
+      </article>
+
+      <article class="card">
+        <h2>Key Principles</h2>
+        <ul>
+          <li>Grid-driven layouts and modular structure</li>
+          <li>Sans-serif typography for neutrality and legibility</li>
+          <li>Asymmetry and intentional white space</li>
+          <li>Minimal color — limited palette with strong contrasts</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Notable Figures & References</h2>
+        <ol>
+          <li>Josef Müller‑Brockmann — grid and constructive graphic design</li>
+          <li>Max Bill — typographic modernism and clarity</li>
+          <li>Armin Hofmann — education and visual language</li>
+        </ol>
+        <p>See <a href="../research/swiss/references.md" target="_blank" rel="noopener">references</a> for sources and links.</p>
+      </article>
+    </section>
+
+    <h2 class="section-title">Demo — Visual Examples (Swiss-inspired)</h2>
+    <p>Below are small demonstrations that follow Swiss principles: strong typographic hierarchy, a clear grid, and restrained color.</p>
+
+    <section class="cards grid-3">
+      <div class="card example-card ripple">
+        <h3 style="font-weight:700;font-size:1.25rem;letter-spacing:0.02em">Bold Heading</h3>
+        <p style="color: #374151">A concise caption and a clean layout. This card demonstrates typographic hierarchy with generous whitespace.</p>
+      </div>
+
+      <div class="card example-card ripple">
+        <figure class="img-wrap">
+          <img src="../assets/md-typography.svg" alt="typography example">
+        </figure>
+        <h3>Type Specimen</h3>
+        <p>Example showing neutral type with strong scale and alignment.</p>
+      </div>
+
+      <div class="card example-card ripple">
+        <figure class="img-wrap">
+          <img src="../assets/md-components.svg" alt="components example">
+        </figure>
+        <h3>Grid & Components</h3>
+        <p>Components arranged on a strict grid; spacing and alignment are intentional.</p>
+      </div>
+    </section>
+
+    <h2 class="section-title">Implementation Notes</h2>
+    <p>Files to include when you submit this project:</p>
+    <ul>
+      <li>`index.html` (this page)</li>
+      <li>`/research/references.md` — bibliography and image credits</li>
+      <li>`/docs/process-notes.md` — short notes on steps and screenshots</li>
+    </ul>
+
+  </main>
+
+  <footer class="footer elevation-2">
+    <div class="container">Swiss Design example — adapt content as needed</div>
+  </footer>
+
+  <script>
+    // preserve reduced motion and ripple behavior
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) {
+      document.querySelectorAll('.animate').forEach(n => { n.style.transition = 'none'; n.classList.add('visible'); });
+    }
+    document.querySelectorAll('.ripple').forEach(el => {
+      el.addEventListener('click', function (ev) {
+        const span = document.createElement('span');
+        span.className = 'ripple-effect';
+        this.appendChild(span);
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        span.style.width = span.style.height = size + 'px';
+        span.style.left = (ev.clientX - rect.left - size/2) + 'px';
+        span.style.top = (ev.clientY - rect.top - size/2) + 'px';
+        setTimeout(() => span.remove(), 700);
+      });
+    });
+  </script>
+</body>
+</html>

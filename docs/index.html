@@ -1,70 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Material Design Gallery</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Material Pixel — Home</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="app-bar">
-  <h1>Material Design Gallery</h1>
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#examples">Examples</a>
-  </nav>
+<header class="app-bar elevation-4">
+  <div class="container row-between">
+    <div class="brand">
+      <img src="assets/md-widgets.svg" class="logo" alt="logo">
+      <span class="site-title">Pixel Material</span>
+    </div>
+    <nav class="main-nav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#components">Components</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero" id="hero">
-  <h2>🎨 Bold, Elevated, Motion-Rich Design</h2>
-  <p>Explore the principles of Google's Material Design through this gallery.</p>
-  <a href="#examples" class="btn-primary">Explore Components</a>
-</section>
-
-<section class="cards-section" id="about">
-  <div class="card">
-    <img src="https://unsplash.it/400/200?image=1025" alt="Material Colors">
-    <h3>Color & Typography</h3>
-    <p>Bold colors and Roboto typography create a clean and modern interface.</p>
+<section id="hero" class="hero elevation-2">
+  <div class="hero-blobs" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
   </div>
-  <div class="card">
-    <img src="https://unsplash.it/400/200?image=1035" alt="Elevation">
-    <h3>Elevation & Shadows</h3>
-    <p>Shadows provide depth and hierarchy to your UI components.</p>
-  </div>
-  <div class="card">
-    <img src="https://unsplash.it/400/200?image=1045" alt="Motion">
-    <h3>Interactive Motion</h3>
-    <p>Smooth animations make interactions intuitive and delightful.</p>
-  </div>
-</section>
-
-<section class="cards-section" id="examples">
-  <div class="card">
-    <img src="https://unsplash.it/400/200?image=1055" alt="Card Example">
-    <h3>Cards Example</h3>
-    <p>Material Design cards with elevation, shadows, and rounded corners.</p>
-  </div>
-  <div class="card">
-    <img src="https://unsplash.it/400/200?image=1065" alt="Buttons Example">
-    <h3>Buttons Example</h3>
-    <p>Raised, outlined, and text buttons with primary and secondary colors.</p>
-  </div>
-  <div class="card">
-    <img src="https://unsplash.it/400/200?image=1075" alt="FAB Example">
-    <h3>Floating Action Button</h3>
-    <p>A circular FAB for your primary actions, elevated and interactive.</p>
+  <div class="container hero-inner">
+    <div class="hero-copy animate">
+      <h1>Material You — Pixel UI Vibes</h1>
+      <p class="lead">A compact showcase of Material/Pixel interface patterns — colors, elevation, motion, and components with a warm, rounded Pixel feel.</p>
+      <div class="actions">
+        <a class="btn-primary ripple" href="#components">See Components</a>
+        <a class="btn-outline ripple" href="#about">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-preview animate delay-1">
+      <div class="phone-mockup elevation-6">
+        <img src="assets/md-color.svg" alt="Pixel mockup background" class="mock-bg">
+        <div class="mock-screen">
+          <img src="assets/md-components.svg" alt="Buttons screenshot">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<a href="#hero" class="fab">↑</a>
+<section id="about" class="section about-section">
+  <div class="container">
+    <h2 class="section-title animate">About this style</h2>
+    <div class="grid-3 cards">
+      <article class="about-card animate delay-1 ripple">
+        <img src="assets/md-color.svg" alt="Consistency illustration" />
+        <h3>Consistency</h3>
+        <p>Modular components and consistent behaviors across Android & web create a unified experience.</p>
+      </article>
+      <article class="about-card animate delay-2 ripple">
+        <img src="assets/md-dynamic.svg" alt="Motion illustration" />
+        <h3>Motion</h3>
+        <p>Animations clarify hierarchy — transitions and shared element flows guide users naturally.</p>
+      </article>
+      <article class="about-card animate delay-3 ripple">
+        <img src="assets/md-typography.svg" alt="Color illustration" />
+        <h3>Color & Theming</h3>
+        <p>Dynamic color theming and rounded shapes make Pixel interfaces feel personal and playful.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-<footer class="footer">
-  <p>&copy; 2025 Material Design Gallery</p>
+<section id="components" class="section components-section">
+  <div class="container">
+    <h2 class="section-title animate">Components</h2>
+    <div class="cards grid-3">
+      <div class="card example-card animate delay-1 ripple">
+        <figure class="img-wrap">
+          <img src="assets/md-components.svg" alt="Buttons UI example">
+          <div class="img-overlay">Buttons</div>
+        </figure>
+        <h3>Interactive Buttons</h3>
+        <p>Ripple, elevation, and comfortable touch sizes — ideal for Pixel devices.</p>
+      </div>
+      <div class="card example-card animate delay-2 ripple">
+        <figure class="img-wrap">
+          <img src="assets/md-elevation.svg" alt="Cards UI example">
+          <div class="img-overlay">Cards</div>
+        </figure>
+        <h3>Elevated Cards</h3>
+        <p>Cards group content and show depth using subtle multi-layer shadows and rounded corners.</p>
+      </div>
+      <div class="card example-card animate delay-3 ripple">
+        <figure class="img-wrap">
+          <img src="assets/md-dynamic.svg" alt="Dialogs UI example">
+          <div class="img-overlay">Dialogs</div>
+        </figure>
+        <h3>Dialogs & Modals</h3>
+        <p>Contextual overlays for tasks — use appropriate elevation and focus management.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resources" class="section resources-section">
+  <div class="container">
+    <h2 class="section-title animate">Resources</h2>
+    <ul class="resource-list animate delay-1">
+      <li><a href="https://m3.material.io/" target="_blank" rel="noopener">Material 3 (official)</a></li>
+      <li><a href="https://m3.material.io/components" target="_blank" rel="noopener">Components & Specs</a></li>
+      <li><a href="https://m3.material.io/motion" target="_blank" rel="noopener">Motion Guidelines</a></li>
+      <li><a href="https://developer.android.com/design" target="_blank" rel="noopener">Android Design Docs</a></li>
+    </ul>
+  </div>
+</section>
+
+<a href="#hero" class="fab elevation-6 ripple" aria-label="Back to top">↑</a>
+
+<footer class="footer elevation-2">
+  <div class="container">
+    <p>&copy; 2025 Pixel Material</p>
+  </div>
 </footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.22 });
+
+  document.querySelectorAll('.animate').forEach(el => io.observe(el));
+  document.querySelectorAll('.ripple').forEach(el => {
+    el.addEventListener('click', function (ev) {
+      const span = document.createElement('span');
+      span.className = 'ripple-effect';
+      this.appendChild(span);
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      span.style.width = span.style.height = size + 'px';
+      span.style.left = (ev.clientX - rect.left - size/2) + 'px';
+      span.style.top = (ev.clientY - rect.top - size/2) + 'px';
+      setTimeout(() => span.remove(), 700);
+    });
+  });
+</script>
 
 </body>
 </html>

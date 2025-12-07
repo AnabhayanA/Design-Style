@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>STYLE NAME — Research & Demo (template)</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="app-bar elevation-4">
+    <div class="container row-between">
+      <div class="brand">
+        <img src="../assets/md-widgets.svg" class="logo" alt="logo">
+        <span class="site-title">STYLE NAME</span>
+      </div>
+      <nav class="main-nav">
+        <a href="../gallery.html">Gallery</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="section-title">STYLE NAME — History & Context</h1>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Short Summary</h2>
+        <p>Replace this paragraph with a concise history of the style (origins, timeframe, notable designers, geographical context).</p>
+      </article>
+
+      <article class="card">
+        <h2>Key Principles</h2>
+        <ul>
+          <li>Principle 1 — explanation</li>
+          <li>Principle 2 — explanation</li>
+          <li>Principle 3 — explanation</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>References / Bibliography</h2>
+        <ol>
+          <li><a href="#" target="_blank" rel="noopener">Reference 1</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Reference 2</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Reference 3</a></li>
+        </ol>
+      </article>
+    </section>
+
+    <h2 class="section-title">Demo — Visual Examples</h2>
+    <section class="cards grid-3">
+      <div class="card example-card ripple">
+        <figure class="img-wrap">
+          <img src="../assets/md-components.svg" alt="example">
+        </figure>
+        <h3>Component 1</h3>
+        <p>Explain how this demonstrates the style.</p>
+      </div>
+
+      <div class="card example-card ripple">
+        <figure class="img-wrap">
+          <img src="../assets/md-color.svg" alt="example">
+        </figure>
+        <h3>Component 2</h3>
+        <p>Explain how this demonstrates the style.</p>
+      </div>
+
+      <div class="card example-card ripple">
+        <figure class="img-wrap">
+          <img src="../assets/md-elevation.svg" alt="example">
+        </figure>
+        <h3>Component 3</h3>
+        <p>Explain how this demonstrates the style.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer elevation-2">
+    <div class="container">Template — adapt content and images for your style</div>
+  </footer>
+
+  <script>
+    // preserve reduced motion handling and ripple script
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) {
+      document.querySelectorAll('.animate').forEach(n => { n.style.transition = 'none'; n.classList.add('visible'); });
+    }
+    document.querySelectorAll('.ripple').forEach(el => {
+      el.addEventListener('click', function (ev) {
+        const span = document.createElement('span');
+        span.className = 'ripple-effect';
+        this.appendChild(span);
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        span.style.width = span.style.height = size + 'px';
+        span.style.left = (ev.clientX - rect.left - size/2) + 'px';
+        span.style.top = (ev.clientY - rect.top - size/2) + 'px';
+        setTimeout(() => span.remove(), 700);
+      });
+    });
+  </script>
+</body>
+</html>
