@@ -4,53 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Material Design Showcase</title>
-  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- App Bar -->
 <header class="app-bar elevation-4">
   <div class="container">
-    <h1>Material Design Showcase</h1>
+    <h1>Material Design</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="examples.html">Examples</a>
+      <a href="#hero">Home</a>
+      <a href="#history">History</a>
+      <a href="#examples">Examples</a>
+      <a href="#references">References</a>
     </nav>
   </div>
 </header>
 
-<section class="hero elevation-2">
+<!-- Hero Section -->
+<section id="hero" class="hero elevation-2">
   <div class="container hero-content">
     <h2>🎨 Bold, Elevated, Motion-Rich Design</h2>
-    <p>Learn about Google's Material Design principles and see real examples.</p>
-    <a href="#cards" class="btn-primary">Explore Components</a>
+    <p>Material Design brings depth, motion, and color to digital interfaces.</p>
+    <a href="#examples" class="btn-primary ripple">Explore Components</a>
   </div>
 </section>
 
-<section class="container cards-section" id="cards">
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1025" alt="Card Image">
-    <h3>Colorful UI</h3>
-    <p>Bold colors make your interface visually appealing and accessible.</p>
-  </div>
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1035" alt="Card Image">
-    <h3>Elevated Surfaces</h3>
-    <p>Shadows and depth create hierarchy and structure in your UI.</p>
-  </div>
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1045" alt="Card Image">
-    <h3>Interactive Motion</h3>
-    <p>Smooth animations reveal relationships and enhance user experience.</p>
+<!-- History Section -->
+<section id="history" class="section elevation-1">
+  <div class="container">
+    <h2>History of Material Design</h2>
+    <p>Material Design is Google’s design language launched in 2014. It combines the rational grid systems of Swiss design with principles of physical materials and motion to create digital experiences that are intuitive, accessible, and visually appealing.</p>
+    <ul>
+      <li>Digital surfaces behave like real materials (paper and ink metaphor)</li>
+      <li>Bold accent colors guide attention and hierarchy</li>
+      <li>Shadows and depth create structure</li>
+      <li>Motion communicates relationships and provides feedback</li>
+    </ul>
   </div>
 </section>
 
-<a href="#cards" class="fab elevation-6">+</a>
+<!-- Examples Section -->
+<section id="examples" class="section container">
+  <h2>Components & Examples</h2>
+  <div class="grid">
+    <div class="card elevation-2">
+      <img src="images/colorful-ui.jpg" alt="Colorful UI">
+      <div class="card-content">
+        <h3>Colorful UI</h3>
+        <p>Bold colors make your interface visually appealing and accessible.</p>
+      </div>
+    </div>
+    <div class="card elevation-2">
+      <img src="images/elevated-surfaces.jpg" alt="Elevated Surfaces">
+      <div class="card-content">
+        <h3>Elevated Surfaces</h3>
+        <p>Shadows and elevation create hierarchy in the interface.</p>
+      </div>
+    </div>
+    <div class="card elevation-2">
+      <img src="images/interactive-motion.jpg" alt="Interactive Motion">
+      <div class="card-content">
+        <h3>Interactive Motion</h3>
+        <p>Smooth animations enhance usability and provide feedback.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- References Section -->
+<section id="references" class="section elevation-1">
+  <div class="container">
+    <h2>References & Resources</h2>
+    <ul>
+      <li><a href="https://material.io/design">Material Design Official Site</a></li>
+      <li><a href="https://material.io/components">Material Components</a></li>
+      <li><a href="https://fonts.google.com/specimen/Roboto">Roboto Font</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Floating Action Button -->
+<a href="#hero" class="fab elevation-6 ripple">↑</a>
+
+<!-- Footer -->
 <footer class="footer elevation-2">
   <p>&copy; 2025 Material Design Showcase</p>
 </footer>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav a, .fab').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Ripple effect for buttons
+  document.querySelectorAll('.ripple').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const circle = document.createElement('span');
+      circle.classList.add('ripple-effect');
+      this.appendChild(circle);
+      const d = Math.max(this.clientWidth, this.clientHeight);
+      circle.style.width = circle.style.height = d + 'px';
+      circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+      circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
+      circle.addEventListener('animationend', () => circle.remove());
+    });
+  });
+</script>
 
 </body>
 </html>
