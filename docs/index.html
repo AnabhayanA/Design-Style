@@ -167,11 +167,11 @@
 </footer>
 
 <script>
+  // Intersection Observer for scroll-triggered animations
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
       const target = e.target;
-      // if container uses .stagger, apply per-child stagger indices
       if (target.classList && target.classList.contains('stagger')) {
         Array.from(target.querySelectorAll('.animate')).forEach((child, i) => {
           child.style.setProperty('--stagger-index', i);
@@ -184,7 +184,9 @@
   }, { threshold: 0.22 });
 
   document.querySelectorAll('.animate').forEach(el => io.observe(el));
-    document.querySelectorAll('.ripple').forEach(el => {
+
+  // Enhanced ripple effect with improved visuals
+  document.querySelectorAll('.ripple').forEach(el => {
     el.addEventListener('click', function (ev) {
       const span = document.createElement('span');
       span.className = 'ripple-effect';
@@ -195,6 +197,53 @@
       span.style.left = (ev.clientX - rect.left - size/2) + 'px';
       span.style.top = (ev.clientY - rect.top - size/2) + 'px';
       setTimeout(() => span.remove(), 300);
+    });
+  });
+
+  // Interactive card hover effects with parallax
+  document.querySelectorAll('.image-card, .card, .example-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const xPercent = (x / rect.width - 0.5) * 2;
+      const yPercent = (y / rect.height - 0.5) * 2;
+      card.style.setProperty('--mouse-x', `${xPercent}deg`);
+      card.style.setProperty('--mouse-y', `${yPercent}deg`);
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--mouse-x', '0deg');
+      card.style.setProperty('--mouse-y', '0deg');
+    });
+  });
+
+  // Smooth scroll behavior for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Add active nav state on scroll
+  const navLinks = document.querySelectorAll('.main-nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
     });
   });
 </script>
