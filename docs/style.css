@@ -27,8 +27,14 @@ html {
   --color-secondary-light: #66fff9;
   --color-accent: #FF6B9D;
   --color-accent-light: #FF9CBE;
+  --color-tertiary: #FFB703;
+  --color-info: #0077B6;
   --surface: #FFFFFF;
+  --surface-dark: #F3E5FF;
+  --surface-accent: #E0F7FA;
+  --surface-warm: #FFF3E0;
   --background: #F5F5F7;
+  --background-gradient: linear-gradient(135deg, #F5F5F7 0%, #E8F5E9 100%);
   --text: #1F1F1F;
   --text-secondary: #666666;
 
@@ -57,7 +63,7 @@ html {
 .stagger-2 > .animate { --stagger-step: 100ms }
 
 body {
-  background-color: var(--background);
+  background: linear-gradient(180deg, #ffffff 0%, #f0f4ff 50%, #fff0f5 100%);
   color: var(--text);
   line-height: 1.7;
   font-weight: 400;
@@ -243,26 +249,51 @@ a {
   opacity: 0.3;
 }
 
+/* Section-specific background colors */
+.palette-section {
+  background: linear-gradient(135deg, rgba(98, 0, 238, 0.05) 0%, rgba(3, 218, 198, 0.05) 100%);
+}
+
+.about-section {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.05) 0%, rgba(255, 183, 3, 0.05) 100%);
+}
+
+.components-section {
+  background: linear-gradient(135deg, rgba(0, 119, 182, 0.05) 0%, rgba(3, 218, 198, 0.05) 100%);
+}
+
+.gallery-section {
+  background: linear-gradient(135deg, rgba(255, 183, 3, 0.05) 0%, rgba(255, 107, 157, 0.05) 100%);
+}
+
+.resources-section {
+  background: linear-gradient(135deg, rgba(98, 0, 238, 0.08) 0%, rgba(255, 183, 3, 0.08) 100%);
+}
+
 .section-title {
-  font-size: 2.4rem;
-  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  margin-bottom: 3.5rem;
   text-align: center;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.3px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
   position: relative;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  bottom: -1rem;
+  bottom: -1.2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
   border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(98, 0, 238, 0.2);
 }
 
 /* ===============================
@@ -662,4 +693,24 @@ a {
 
 .fab:hover {
   animation: none;
+}
+
+/* Icon box styling for about cards */
+.icon-box {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all var(--motion-standard) var(--motion-easing);
+  box-shadow: var(--shadow-4);
+}
+
+.about-card:hover .icon-box {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: var(--shadow-6);
 }
