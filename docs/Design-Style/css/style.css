@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* App Bar */
+.app-bar {
+    background-color: #6200EE;
+    color: white;
+    padding: 16px;
+}
+
+.app-bar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #03DAC6;
+    color: #000;
+    padding: 64px 16px;
+    text-align: center;
+    position: relative;
+}
+
+.fab {
+    background-color: #6200EE;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    margin-top: 16px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.12),
+                0px 1px 2px rgba(0,0,0,0.24);
+    flex: 1 1 calc(33% - 24px);
+    min-width: 250px;
+}
+
+/* Buttons */
+.button-primary {
+    background-color: #6200EE;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 16px;
+    margin-top: 64px;
+    background-color: #FAFAFA;
+    color: #333;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+}
