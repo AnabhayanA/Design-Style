@@ -1,21 +1,6 @@
-# Design References
+# References
 
-## Material Design
-- [Material Design Guidelines](https://material.io/design)
-- [Material Components for Web](https://material.io/components/web/)
-
-## Swiss Design
-- [Swiss Style History](https://www.typography.com/swiss-style)
-- *Swiss Style: The International Typographic Style* (book)
-
-## CSS & Front-End Guides
-- [MDN Web Docs](https://developer.mozilla.org/)
-- [CSS Tricks](https://css-tricks.com/)
-- [A List Apart](https://alistapart.com/)
-
-## Inspiration & Examples
-- Google.com redesign documentation
-- Android Open Source Project (AOSP) UI examples
-- Dribbble / Behance: Material Design case studies
-
-##
+- Material Design Guidelines: [https://material.io](https://material.io)
+- Google Fonts - Roboto: [https://fonts.google.com/specimen/Roboto](https://fonts.google.com/specimen/Roboto)
+- Unsplash placeholder images: [https://unsplash.it](https://unsplash.it)
+- CSS Box Shadow Guide: [https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)

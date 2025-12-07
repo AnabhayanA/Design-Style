@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material Design Style Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Design Showcase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- App Bar -->
-    <header class="app-bar">
-        <div class="container">
-            <h1>Material Design Gallery</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="examples.html">Examples</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Material Design</h2>
-            <p>Colorful, elevated, motion-rich design language inspired by Swiss design.</p>
-            <button class="fab">Explore</button>
-        </div>
-    </section>
+<header class="app-bar elevation-4">
+  <div class="container">
+    <h1>Material Design Showcase</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="examples.html">Examples</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Card Section -->
-    <section class="cards container">
-        <div class="card">
-            <h3>Elevation</h3>
-            <p>Realistic shadows to show hierarchy and depth.</p>
-        </div>
-        <div class="card">
-            <h3>Typography</h3>
-            <p>Roboto font family with type scale from H1-H6 and body text.</p>
-        </div>
-        <div class="card">
-            <h3>Color</h3>
-            <p>Bold, vibrant color palette with primary and secondary colors.</p>
-        </div>
-    </section>
+<section class="hero elevation-2">
+  <div class="container hero-content">
+    <h2>🎨 Bold, Elevated, Motion-Rich Design</h2>
+    <p>Learn about Google's Material Design principles and see real examples.</p>
+    <a href="#cards" class="btn-primary">Explore Components</a>
+  </div>
+</section>
 
-    <footer class="footer">
-        <p>&copy; 2025 Material Design Gallery</p>
-    </footer>
+<section class="container cards-section" id="cards">
+  <div class="card elevation-1">
+    <img src="https://unsplash.it/400/200?image=1025" alt="Card Image">
+    <h3>Colorful UI</h3>
+    <p>Bold colors make your interface visually appealing and accessible.</p>
+  </div>
+  <div class="card elevation-1">
+    <img src="https://unsplash.it/400/200?image=1035" alt="Card Image">
+    <h3>Elevated Surfaces</h3>
+    <p>Shadows and depth create hierarchy and structure in your UI.</p>
+  </div>
+  <div class="card elevation-1">
+    <img src="https://unsplash.it/400/200?image=1045" alt="Card Image">
+    <h3>Interactive Motion</h3>
+    <p>Smooth animations reveal relationships and enhance user experience.</p>
+  </div>
+</section>
+
+<a href="#cards" class="fab elevation-6">+</a>
+
+<footer class="footer elevation-2">
+  <p>&copy; 2025 Material Design Showcase</p>
+</footer>
+
 </body>
 </html>
