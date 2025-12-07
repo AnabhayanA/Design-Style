@@ -245,7 +245,18 @@ html_index = """<!DOCTYPE html>
 
   <script>
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const target = e.target;
+        if (target.classList && target.classList.contains('stagger')) {
+          Array.from(target.querySelectorAll('.animate')).forEach((child, i) => {
+            child.style.setProperty('--stagger-index', i);
+            child.classList.add('visible');
+          });
+        } else {
+          target.classList.add('visible');
+        }
+      });
     }, { threshold: 0.22 });
 
     document.querySelectorAll('.animate').forEach(el => io.observe(el));
