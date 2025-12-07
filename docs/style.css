@@ -36,7 +36,7 @@ html {
   --background: #F5F5F7;
   --background-gradient: linear-gradient(135deg, #F5F5F7 0%, #E8F5E9 100%);
   --text: #1F1F1F;
-  --text-secondary: #666666;
+  --text-secondary: #555555;
 
   /* legacy aliases (kept for combined CSS compatibility) */
   --primary: var(--color-primary);
@@ -200,6 +200,11 @@ a {
   transform: translateY(-2px);
 }
 
+.btn-primary:active {
+  transform: scale(0.96);
+  box-shadow: var(--shadow-2);
+}
+
 .btn-outline {
   border: 2px solid rgba(255,255,255,0.4);
   color: #fff;
@@ -216,6 +221,11 @@ a {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255,255,255,0.6);
   transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: scale(0.96);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Hero blobs */
