@@ -3,119 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Material Design Showcase</title>
+  <title>Material Design Gallery</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- App Bar -->
-<header class="app-bar elevation-4">
-  <div class="container">
-    <h1>Material Design</h1>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#history">History</a>
-      <a href="#examples">Examples</a>
-      <a href="#references">References</a>
-    </nav>
-  </div>
+<header class="app-bar">
+  <h1>Material Design Gallery</h1>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#examples">Examples</a>
+  </nav>
 </header>
 
-<!-- Hero Section -->
-<section id="hero" class="hero elevation-2">
-  <div class="container hero-content">
-    <h2>🎨 Bold, Elevated, Motion-Rich Design</h2>
-    <p>Material Design brings depth, motion, and color to digital interfaces.</p>
-    <a href="#examples" class="btn-primary ripple">Explore Components</a>
+<section class="hero" id="hero">
+  <h2>🎨 Bold, Elevated, Motion-Rich Design</h2>
+  <p>Explore the principles of Google's Material Design through this gallery.</p>
+  <a href="#examples" class="btn-primary">Explore Components</a>
+</section>
+
+<section class="cards-section" id="about">
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1025" alt="Material Colors">
+    <h3>Color & Typography</h3>
+    <p>Bold colors and Roboto typography create a clean and modern interface.</p>
+  </div>
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1035" alt="Elevation">
+    <h3>Elevation & Shadows</h3>
+    <p>Shadows provide depth and hierarchy to your UI components.</p>
+  </div>
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1045" alt="Motion">
+    <h3>Interactive Motion</h3>
+    <p>Smooth animations make interactions intuitive and delightful.</p>
   </div>
 </section>
 
-<!-- History Section -->
-<section id="history" class="section elevation-1">
-  <div class="container">
-    <h2>History of Material Design</h2>
-    <p>Material Design is Google’s design language launched in 2014. It combines the rational grid systems of Swiss design with principles of physical materials and motion to create digital experiences that are intuitive, accessible, and visually appealing.</p>
-    <ul>
-      <li>Digital surfaces behave like real materials (paper and ink metaphor)</li>
-      <li>Bold accent colors guide attention and hierarchy</li>
-      <li>Shadows and depth create structure</li>
-      <li>Motion communicates relationships and provides feedback</li>
-    </ul>
+<section class="cards-section" id="examples">
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1055" alt="Card Example">
+    <h3>Cards Example</h3>
+    <p>Material Design cards with elevation, shadows, and rounded corners.</p>
+  </div>
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1065" alt="Buttons Example">
+    <h3>Buttons Example</h3>
+    <p>Raised, outlined, and text buttons with primary and secondary colors.</p>
+  </div>
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1075" alt="FAB Example">
+    <h3>Floating Action Button</h3>
+    <p>A circular FAB for your primary actions, elevated and interactive.</p>
   </div>
 </section>
 
-<!-- Examples Section -->
-<section id="examples" class="section container">
-  <h2>Components & Examples</h2>
-  <div class="grid">
-    <div class="card elevation-2">
-      <img src="images/colorful-ui.jpg" alt="Colorful UI">
-      <div class="card-content">
-        <h3>Colorful UI</h3>
-        <p>Bold colors make your interface visually appealing and accessible.</p>
-      </div>
-    </div>
-    <div class="card elevation-2">
-      <img src="images/elevated-surfaces.jpg" alt="Elevated Surfaces">
-      <div class="card-content">
-        <h3>Elevated Surfaces</h3>
-        <p>Shadows and elevation create hierarchy in the interface.</p>
-      </div>
-    </div>
-    <div class="card elevation-2">
-      <img src="images/interactive-motion.jpg" alt="Interactive Motion">
-      <div class="card-content">
-        <h3>Interactive Motion</h3>
-        <p>Smooth animations enhance usability and provide feedback.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<a href="#hero" class="fab">↑</a>
 
-<!-- References Section -->
-<section id="references" class="section elevation-1">
-  <div class="container">
-    <h2>References & Resources</h2>
-    <ul>
-      <li><a href="https://material.io/design">Material Design Official Site</a></li>
-      <li><a href="https://material.io/components">Material Components</a></li>
-      <li><a href="https://fonts.google.com/specimen/Roboto">Roboto Font</a></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Floating Action Button -->
-<a href="#hero" class="fab elevation-6 ripple">↑</a>
-
-<!-- Footer -->
-<footer class="footer elevation-2">
-  <p>&copy; 2025 Material Design Showcase</p>
+<footer class="footer">
+  <p>&copy; 2025 Material Design Gallery</p>
 </footer>
-
-<script>
-  // Smooth scroll for nav links
-  document.querySelectorAll('nav a, .fab').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  // Ripple effect for buttons
-  document.querySelectorAll('.ripple').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      const circle = document.createElement('span');
-      circle.classList.add('ripple-effect');
-      this.appendChild(circle);
-      const d = Math.max(this.clientWidth, this.clientHeight);
-      circle.style.width = circle.style.height = d + 'px';
-      circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
-      circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
-      circle.addEventListener('animationend', () => circle.remove());
-    });
-  });
-</script>
 
 </body>
 </html>

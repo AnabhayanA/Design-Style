@@ -1,70 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Material Design</title>
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Material Design</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="app-bar elevation-4">
-  <div class="container">
-    <h1>Material Design Guide</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="examples.html">Examples</a>
-    </nav>
-  </div>
+<header class="app-bar">
+  <h1>Material Design Gallery</h1>
+  <nav>
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#examples">Examples</a>
+  </nav>
 </header>
 
-<section class="hero elevation-2">
-  <div class="container hero-content">
-    <h2>Learn Material Design Principles</h2>
-    <p>Material Design is Google's design system emphasizing hierarchy, elevation, motion, and bold color palettes.</p>
-  </div>
+<section class="hero" id="about">
+  <h2>About Material Design</h2>
+  <p>Material Design is Google's design language, combining bold colors, meaningful motion, and depth to create intuitive, beautiful user interfaces.</p>
 </section>
 
-<section class="container cards-section">
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1050" alt="Design grid example">
-    <h3>Grid System</h3>
-    <p>Everything aligns to an 8dp baseline grid for consistency and visual harmony.</p>
+<section class="cards-section">
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1085" alt="History">
+    <h3>History</h3>
+    <p>Created in 2014, Material Design evolved to unify mobile, web, and native apps with consistent design patterns.</p>
   </div>
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1060" alt="Typography example">
-    <h3>Typography</h3>
-    <p>Roboto font family ensures readability, hierarchy, and consistency across all components.</p>
-  </div>
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1070" alt="Color example">
-    <h3>Colors</h3>
-    <p>Vibrant, saturated primary and secondary colors create contrast and visual delight.</p>
-  </div>
-</section>
-
-<section class="container cards-section">
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1080" alt="Motion example">
-    <h3>Motion & Interaction</h3>
-    <p>Smooth animations and hover effects reveal relationships and guide users.</p>
-  </div>
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1090" alt="Elevation example">
-    <h3>Elevation</h3>
-    <p>Shadows create depth and hierarchy, distinguishing surfaces and elements.</p>
-  </div>
-  <div class="card elevation-1">
-    <img src="https://unsplash.it/400/200?image=1100" alt="Components example">
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1095" alt="Components">
     <h3>Components</h3>
-    <p>Buttons, cards, and FABs follow Material specifications for interaction and style.</p>
+    <p>Cards, buttons, FABs, app bars, and other components follow a unified design system.</p>
+  </div>
+  <div class="card">
+    <img src="https://unsplash.it/400/200?image=1105" alt="Guidelines">
+    <h3>Guidelines</h3>
+    <p>Material Design provides a detailed color system, typography rules, and motion principles to build modern apps.</p>
   </div>
 </section>
 
-<footer class="footer elevation-2">
-  <p>&copy; 2025 Material Design Showcase</p>
+<a href="#hero" class="fab">↑</a>
+
+<footer class="footer">
+  <p>&copy; 2025 Material Design Gallery</p>
 </footer>
 
 </body>
