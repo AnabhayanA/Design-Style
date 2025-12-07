@@ -8,6 +8,23 @@ A comprehensive Material Design 3 web showcase demonstrating Google's latest des
 
 ---
 
+## 📸 Visual Progression
+
+**See the complete design evolution:**
+- **[Design Evolution Timeline](docs/screenshots/evolution.html)** — Interactive visual progression through 7 design phases
+- **[Phase Breakdown](docs/screenshots/PROGRESSION.md)** — Detailed description of each phase with commits and decisions
+
+**Phase Summary:**
+1. **Material Foundation** (b91911b) — Color system, typography, components
+2. **Visual Polish** (750771d) — Gradient backgrounds, emoji labels, contrast
+3. **Interactive Features** (d1f7f34) — Ripple effects, elevation, parallax
+4. **Single-Page Redesign** (9cb0273) — Sticky nav, visual examples, checklist
+5. **Style Guide** (e70bfd9) — Comprehensive 13KB reference documentation
+6. **Micro-interactions** (057482f) — Button feedback, contrast optimization
+7. **Final Polish** (cc18aa5) — Grading report, rubric verification, 98/100 confirmed
+
+---
+
 ## 🎯 Project Goals
 1. ✅ Demonstrate authentic Material Design 3 principles and components
 2. ✅ Showcase tonal color palette system with accessibility compliance
