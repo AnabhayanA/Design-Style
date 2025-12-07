@@ -646,3 +646,20 @@ a {
 @media (max-width: 560px) {
   .gallery-grid { gap: 0.75rem; }
 }
+
+/* ===============================
+   ADDITIONAL MATERIAL ANIMATIONS
+=============================== */
+/* Floating animation for FAB */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.fab {
+  animation: float 3s ease-in-out infinite;
+}
+
+.fab:hover {
+  animation: none;
+}
