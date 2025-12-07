@@ -117,6 +117,35 @@
   </div>
 </section>
 
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <h2 class="section-title animate">Gallery & Shots</h2>
+    <div class="gallery-hero animate delay-1">
+      <div class="hero-card elevation-6">
+        <img class="hero-image" src="assets/hero-illustration.svg" alt="Hero illustration showing sample screens">
+        <h3 style="margin-top:1rem">Screens & Concepts</h3>
+        <p class="lead">A small gallery of screenshots and illustrations to show how components and color come together in context.</p>
+      </div>
+      <div>
+        <div class="gallery-grid">
+          <article class="image-card animate ripple">
+            <div class="img-aspect"><img src="assets/gallery-1.svg" alt="App list screen"></div>
+            <div class="caption">App list — elevated cards</div>
+          </article>
+          <article class="image-card animate ripple">
+            <div class="img-aspect"><img src="assets/gallery-2.svg" alt="Settings screen"></div>
+            <div class="caption">Settings — toggles & motion</div>
+          </article>
+          <article class="image-card animate ripple">
+            <div class="img-aspect"><img src="assets/gallery-3.svg" alt="Empty state illustration"></div>
+            <div class="caption">Empty state — playful illustration</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="resources" class="section resources-section">
   <div class="container">
     <h2 class="section-title animate">Resources</h2>
@@ -139,7 +168,19 @@
 
 <script>
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const target = e.target;
+      // if container uses .stagger, apply per-child stagger indices
+      if (target.classList && target.classList.contains('stagger')) {
+        Array.from(target.querySelectorAll('.animate')).forEach((child, i) => {
+          child.style.setProperty('--stagger-index', i);
+          child.classList.add('visible');
+        });
+      } else {
+        target.classList.add('visible');
+      }
+    });
   }, { threshold: 0.22 });
 
   document.querySelectorAll('.animate').forEach(el => io.observe(el));
