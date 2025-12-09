@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Material Design 3 System</title>
+<meta name="description" content="Comprehensive Material Design 3 showcase with interactive demos, color system, typography, elevation, and motion playground.">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   /* Sticky Navigation */
@@ -287,7 +290,7 @@
 <!-- Components Section -->
 <section id="components" class="section" style="background: #F8F8FF;">
   <div class="container">
-    <h2 class="section-title animate">�� Material Components</h2>
+    <h2 class="section-title animate">🧩 Material Components</h2>
 
     <div style="background: white; border-radius: 16px; padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-1);" class="animate delay-1">
       <h3 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 600;">Buttons — All States</h3>
@@ -334,6 +337,40 @@
   <div class="container">
     <h2 class="section-title animate">⚡ Motion & Easing</h2>
 
+    <!-- Interactive Motion Playground -->
+    <div style="background: white; border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-1);" class="animate delay-1">
+      <h3 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700;">🎮 Interactive Motion Playground</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">Click buttons to see Material Design motion in action</p>
+      
+      <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 250px; display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, rgba(98,0,238,0.05), rgba(3,218,198,0.05)); border-radius: 12px; padding: 3rem; min-height: 250px;">
+          <div id="motionBox" style="width: 100px; height: 100px; background: linear-gradient(135deg, #6200EE, #03DAC6); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 2rem; box-shadow: 0 4px 12px rgba(98,0,238,0.3);">
+            🎨
+          </div>
+        </div>
+        
+        <div style="flex: 1; min-width: 250px;">
+          <div style="display: grid; gap: 0.75rem;">
+            <button onclick="animateBox('bounce')" style="padding: 0.75rem 1.5rem; background: var(--color-primary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(98,0,238,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(98,0,238,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(98,0,238,0.3)'">
+              ⬆️ Bounce
+            </button>
+            <button onclick="animateBox('slide')" style="padding: 0.75rem 1.5rem; background: var(--color-secondary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(3,218,198,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(3,218,198,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(3,218,198,0.3)'">
+              ➡️ Slide
+            </button>
+            <button onclick="animateBox('rotate')" style="padding: 0.75rem 1.5rem; background: var(--color-tertiary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(255,183,3,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(255,183,3,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(255,183,3,0.3)'">
+              🔄 Rotate
+            </button>
+            <button onclick="animateBox('scale')" style="padding: 0.75rem 1.5rem; background: var(--color-accent); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(255,101,132,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(255,101,132,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(255,101,132,0.3)'">
+              🔍 Scale
+            </button>
+            <button onclick="animateBox('morph')" style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #6200EE, #03DAC6); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(98,0,238,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(98,0,238,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(98,0,238,0.3)'">
+              ✨ Morph
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div style="background: var(--surface); border-radius: 16px; padding: 2rem; margin-bottom: 2rem;" class="animate delay-2">
       <h3 style="color: var(--text); margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 600;">Standard Easing & Durations</h3>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
@@ -343,6 +380,45 @@
         <div><h4 style="color: var(--color-accent); margin-bottom: 0.5rem; font-weight: 600;">Long Duration</h4><p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">375–400ms</p></div>
       </div>
     </div>
+
+    <!-- Material Easing Curves Reference -->
+    <details style="margin-bottom: 2rem; border: 2px solid rgba(98,0,238,0.2); border-radius: 12px; overflow: hidden; background: white;">
+      <summary style="padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(98,0,238,0.1), rgba(3,218,198,0.1)); cursor: pointer; font-weight: 700; color: var(--color-primary); display: flex; justify-content: space-between; align-items: center;">
+        <span>💎 Material Easing Curves Reference</span>
+        <span style="font-size: 0.9rem; color: var(--text-secondary);">Click to expand</span>
+      </summary>
+      <div style="padding: 1.5rem; background: #f5f5f5;">
+        <h4 style="margin: 0 0 1rem 0; color: var(--text); font-size: 1rem;">All Material Design Easing Functions</h4>
+        <pre style="background: #2d2d2d; color: #f8f8f2; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; line-height: 1.8; margin: 0;"><code><span style="color: #6272a4;">/* Standard Easing - Default for most transitions */</span>
+<span style="color: #50fa7b;">.material-standard</span> {
+  <span style="color: #ff79c6;">transition</span>: <span style="color: #f1fa8c;">all 0.3s cubic-bezier(0.4, 0, 0.2, 1)</span>;
+}
+
+<span style="color: #6272a4;">/* Emphasized Easing - For entering elements */</span>
+<span style="color: #50fa7b;">.material-emphasized-enter</span> {
+  <span style="color: #ff79c6;">transition</span>: <span style="color: #f1fa8c;">all 0.4s cubic-bezier(0.05, 0.7, 0.1, 1)</span>;
+}
+
+<span style="color: #6272a4;">/* Emphasized Exit - For leaving elements */</span>
+<span style="color: #50fa7b;">.material-emphasized-exit</span> {
+  <span style="color: #ff79c6;">transition</span>: <span style="color: #f1fa8c;">all 0.2s cubic-bezier(0.3, 0, 0.8, 0.15)</span>;
+}
+
+<span style="color: #6272a4;">/* Deceleration - Slowing down */</span>
+<span style="color: #50fa7b;">.material-decelerate</span> {
+  <span style="color: #ff79c6;">transition</span>: <span style="color: #f1fa8c;">all 0.25s cubic-bezier(0, 0, 0.2, 1)</span>;
+}
+
+<span style="color: #6272a4;">/* Acceleration - Speeding up */</span>
+<span style="color: #50fa7b;">.material-accelerate</span> {
+  <span style="color: #ff79c6;">transition</span>: <span style="color: #f1fa8c;">all 0.2s cubic-bezier(0.4, 0, 1, 1)</span>;
+}</code></pre>
+
+        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(98,0,238,0.05); border-left: 4px solid var(--color-primary); border-radius: 4px;">
+          <p style="color: var(--text); margin: 0; font-size: 0.9rem; line-height: 1.6;"><strong>Usage Tip:</strong> Use <strong>standard easing</strong> (0.4, 0, 0.2, 1) for 90% of animations. Use <strong>emphasized-enter</strong> for elements appearing on screen, and <strong>emphasized-exit</strong> for elements leaving.</p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -510,6 +586,58 @@
   document.querySelectorAll('.animate').forEach(el => {
     observer.observe(el);
   });
+
+  // Motion Box Animation
+  function animateBox(type) {
+    const box = document.getElementById('motionBox');
+    
+    // Reset all styles
+    box.style.animation = 'none';
+    box.style.transform = '';
+    box.style.borderRadius = '16px';
+    box.style.background = 'linear-gradient(135deg, #6200EE, #03DAC6)';
+    
+    // Force reflow
+    void box.offsetWidth;
+    
+    setTimeout(() => {
+      if (type === 'bounce') {
+        box.style.transition = 'transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        box.style.transform = 'translateY(-80px)';
+        setTimeout(() => {
+          box.style.transform = 'translateY(0)';
+        }, 400);
+      } else if (type === 'slide') {
+        box.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+        box.style.transform = 'translateX(150px)';
+        setTimeout(() => {
+          box.style.transform = 'translateX(0)';
+        }, 400);
+      } else if (type === 'rotate') {
+        box.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        box.style.transform = 'rotate(720deg)';
+        setTimeout(() => {
+          box.style.transform = '';
+        }, 600);
+      } else if (type === 'scale') {
+        box.style.transition = 'transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        box.style.transform = 'scale(2)';
+        setTimeout(() => {
+          box.style.transform = 'scale(1)';
+        }, 400);
+      } else if (type === 'morph') {
+        box.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        box.style.transform = 'rotate(360deg) scale(1.5)';
+        box.style.borderRadius = '50%';
+        box.style.background = '#FFB703';
+        setTimeout(() => {
+          box.style.transform = 'rotate(0) scale(1)';
+          box.style.borderRadius = '16px';
+          box.style.background = 'linear-gradient(135deg, #6200EE, #03DAC6)';
+        }, 600);
+      }
+    }, 50);
+  }
 </script>
 </body>
 </html>
