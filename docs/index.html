@@ -43,6 +43,38 @@
     border-bottom-color: var(--color-primary);
   }
 
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-primary);
+    margin: 5px 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 3px;
+  }
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
   .color-swatch { border-radius: 12px; padding: 1.5rem 1rem; text-align: center; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.2); transition: transform 0.3s; }
   .color-swatch:hover { transform: translateY(-4px); }
   .color-swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
@@ -65,7 +97,35 @@
   section[id] { scroll-margin-top: 80px; }
 
   @media (max-width: 768px) {
-    .sticky-nav a { padding: 0.75rem 1rem; font-size: 0.85rem; }
+    .menu-toggle { display: block; }
+    .sticky-nav { position: relative; }
+    .sticky-nav nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      padding: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .sticky-nav nav.active {
+      max-height: 500px;
+    }
+    .sticky-nav a {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-left: 3px solid transparent;
+    }
+    .sticky-nav a:hover,
+    .sticky-nav a.active {
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-left-color: var(--color-primary);
+    }
     .grid-viz { grid-template-columns: repeat(4, 1fr); }
     .component-grid { grid-template-columns: 1fr; }
   }
@@ -75,16 +135,21 @@
 
 <!-- Sticky Navigation Bar -->
 <div class="sticky-nav">
-  <nav>
-    <a href="#hero" class="nav-link">🏠 Home</a>
-    <a href="#overview" class="nav-link">📚 Overview</a>
-    <a href="#color-system" class="nav-link">🎨 Colors</a>
-    <a href="#typography" class="nav-link">📝 Typography</a>
-    <a href="#elevation" class="nav-link">🔝 Elevation</a>
-    <a href="#components" class="nav-link">🧩 Components</a>
-    <a href="#motion" class="nav-link">⚡ Motion</a>
-    <a href="#grid" class="nav-link">🔲 Grid</a>
-    <a href="#checklist" class="nav-link">✅ Checklist</a>
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="mainNav">
+    <a href="#hero" class="nav-link" onclick="closeMenu()">🏠 Home</a>
+    <a href="#overview" class="nav-link" onclick="closeMenu()">📚 Overview</a>
+    <a href="#color-system" class="nav-link" onclick="closeMenu()">🎨 Colors</a>
+    <a href="#typography" class="nav-link" onclick="closeMenu()">📝 Typography</a>
+    <a href="#elevation" class="nav-link" onclick="closeMenu()">🔝 Elevation</a>
+    <a href="#components" class="nav-link" onclick="closeMenu()">🧩 Components</a>
+    <a href="#motion" class="nav-link" onclick="closeMenu()">⚡ Motion</a>
+    <a href="#grid" class="nav-link" onclick="closeMenu()">🔲 Grid</a>
+    <a href="#checklist" class="nav-link" onclick="closeMenu()">✅ Checklist</a>
   </nav>
 </div>
 
@@ -586,6 +651,21 @@
   document.querySelectorAll('.animate').forEach(el => {
     observer.observe(el);
   });
+
+  // Mobile Menu Toggle
+  function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    const toggle = document.querySelector('.menu-toggle');
+    nav.classList.toggle('active');
+    toggle.classList.toggle('active');
+  }
+
+  function closeMenu() {
+    const nav = document.getElementById('mainNav');
+    const toggle = document.querySelector('.menu-toggle');
+    nav.classList.remove('active');
+    toggle.classList.remove('active');
+  }
 
   // Motion Box Animation
   function animateBox(type) {
